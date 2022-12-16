@@ -1,5 +1,11 @@
 # purge-svg
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?machine=basicLinux32gb&repo=411963580&ref=main)
+
+![Package version](https://img.shields.io/github/package-json/v/Th3S4mur41/purge-svg)
+![GitHub last commit](https://img.shields.io/github/last-commit/Th3S4mur41/purge-svg)
+![Release](https://github.com/Th3S4mur41/purge-svg/actions/workflows/on_push.yml/badge.svg?branch=main)
+
 This is a fork of [purge-svg from Media24si](https://github.com/Media24si/purge-svg) that is no longer seems to be actively maintained
 
 ## What is purge-svg
