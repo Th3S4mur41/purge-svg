@@ -1,12 +1,12 @@
-# PurgeSvg
+# purge-svg
 
-[![Build Status](https://travis-ci.org/Media24si/purge-svg.svg?branch=master)](https://travis-ci.org/Media24si/purge-svg)
+This is a fork of [purge-svg from Media24si](https://github.com/Media24si/purge-svg) that is no longer seems to be actively maintained
 
-## What is PurgeSvg
+## What is purge-svg
 
 If you're using external SVG sprites for your icon system there is a good chance you have a lot of unused icons at the end.
 
-PurgeSvg will analyze your content and remove all unused icons. This will make your SVG file a lot smaller.
+purge-svg will analyze your content and remove all unused icons. This will make your SVG file a lot smaller.
 
 It also enables you to merge more SVG files into one and thereby reducing network requests.
 
@@ -25,14 +25,14 @@ This package was inspired (and some code copied) from [Purgecss](https://github.
 Start by installing the package globally
 
 ```bash
-npm i -g purgesvg
+npm i -g purge-svg
 ```
 
-PurgeSvg is available via a CLI. You can use the CLI by itself or with a configuration file.
+purge-svg is available via a CLI. You can use the CLI by itself or with a configuration file.
 
-To see the available options for the CLI: `purgesvg --help`
+To see the available options for the CLI: `purge-svg --help`
 ```bash
-purgesvg --content <content> --svgs <svgs> [option]
+purge-svg --content <content> --svgs <svgs> [option]
 
 Options:
   -c, --config     configuration file                                   [string]
@@ -45,7 +45,7 @@ Options:
 #### Using configuration file
 
 ```bash
-purgesvg --config /path/to/config.js
+purge-svg --config /path/to/config.js
 ```
 
 #### Options
@@ -56,13 +56,13 @@ purgesvg --config /path/to/config.js
 
 Content that should be analyzed. An array of filenames or glob.
 
-`purgesvg --content index.html /resource/assets/**/*.vue --svgs ...`
+`purge-svg --content index.html /resource/assets/**/*.vue --svgs ...`
 
 * ##### --svgs
 
 SVG files to purge. An array of filenames or glob.
 
-`purgesvg --content index.html --svgs /images/icons.svg /icons/solid.svg`
+`purge-svg --content index.html --svgs /images/icons.svg /icons/solid.svg`
 
 * ##### --out
 
@@ -73,28 +73,28 @@ The output path can be:
  * a path to a file - all SVGs will be purged and merged into this file
  * missing - if this option is missing the purged SVGs will be put beside the original file as `filename.purged.svg`
 
-`purgesvg --content index.html --svgs /icons/*.svg --out /build/purged/icons.svg`
+`purge-svg --content index.html --svgs /icons/*.svg --out /build/purged/icons.svg`
 
 * ##### --whitelist
 
 List of whitelist ids. Id's will be whitelisted for all SVG files.
 
-`purgesvg --content index.html --svgs /icons/*.svg --whitelist rocket heart times`
+`purge-svg --content index.html --svgs /icons/*.svg --whitelist rocket heart times`
 
 ### JavaScript
 
 Start by installing the package as a development dependency
 
 ```bash
-npm i --save-dev purgesvg
+npm i --save-dev purge-svg
 ```
 
-You can use PurgeSvg in your javascript file. Just require the package, create the new PurgeSvg class, add configuration options and call the purge method.
+You can use purge-svg in your javascript file. Just require the package, create the new PurgeSvg class, add configuration options and call the purge method.
 
 The constructor accepts a configuration object or a path to the configuration file.
 
 ```javascript
-const PurgeSvg = require('purgesvg')
+const PurgeSvg = require('purge-svg')
 
 new PurgeSvg({
     content: './__tests__/test_examples/clean_svgs/index.html',
