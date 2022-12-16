@@ -12,7 +12,7 @@ It also enables you to merge more SVG files into one and thereby reducing networ
 
 **:bangbang: Warning :bangbang:️**
 
-Be aware that external SVG sprites are not supported in any version of IE. If you need support for IE check out [svg4everybody](https://github.com/jonathantneal/svg4everybody). 
+Be aware that external SVG sprites are not supported in any version of IE. If you need support for IE check out [svg4everybody](https://github.com/jonathantneal/svg4everybody).
 
 **:heart: Gratitude :heart:**
 
@@ -31,6 +31,7 @@ npm i -g purge-svg
 purge-svg is available via a CLI. You can use the CLI by itself or with a configuration file.
 
 To see the available options for the CLI: `purge-svg --help`
+
 ```bash
 purge-svg --content <content> --svgs <svgs> [option]
 
@@ -52,30 +53,31 @@ purge-svg --config /path/to/config.js
 
 :heavy_check_mark: When not using a configuration file the `--content` and `--svgs` options are required.
 
-* ##### --content
+- ##### --content
 
 Content that should be analyzed. An array of filenames or glob.
 
 `purge-svg --content index.html /resource/assets/**/*.vue --svgs ...`
 
-* ##### --svgs
+- ##### --svgs
 
 SVG files to purge. An array of filenames or glob.
 
 `purge-svg --content index.html --svgs /images/icons.svg /icons/solid.svg`
 
-* ##### --out
+- ##### --out
 
-Output path for purged SVGs. 
+Output path for purged SVGs.
 
 The output path can be:
- * a directory - the purged files will be placed in this folder with the same filename as the SVG
- * a path to a file - all SVGs will be purged and merged into this file
- * missing - if this option is missing the purged SVGs will be put beside the original file as `filename.purged.svg`
+
+- a directory - the purged files will be placed in this folder with the same filename as the SVG
+- a path to a file - all SVGs will be purged and merged into this file
+- missing - if this option is missing the purged SVGs will be put beside the original file as `filename.purged.svg`
 
 `purge-svg --content index.html --svgs /icons/*.svg --out /build/purged/icons.svg`
 
-* ##### --whitelist
+- ##### --whitelist
 
 List of whitelist ids. Id's will be whitelisted for all SVG files.
 
@@ -94,16 +96,18 @@ You can use purge-svg in your javascript file. Just require the package, create 
 The constructor accepts a configuration object or a path to the configuration file.
 
 ```javascript
-const PurgeSvg = require('purge-svg')
+const PurgeSvg = require('purge-svg');
 
 new PurgeSvg({
-    content: './__tests__/test_examples/clean_svgs/index.html',
-    svgs: [{
-        in: './__tests__/test_examples/clean_svgs/icons.svg',
-        out: tempFolder
-    }],
-    whitelist: {'*': ['building']}
-}).purge()
+	content: './__tests__/test_examples/clean_svgs/index.html',
+	svgs: [
+		{
+			in: './__tests__/test_examples/clean_svgs/icons.svg',
+			out: tempFolder
+		}
+	],
+	whitelist: { '*': ['building'] }
+}).purge();
 ```
 
 ### WebPack
@@ -114,7 +118,7 @@ new PurgeSvg({
 
 ### Options
 
-* #### content
+- #### content
 
 Content that should be analyzed. The content option is an array of files or [globs](https://github.com/isaacs/node-glob/blob/master/README.md#glob-primer).
 
@@ -125,7 +129,7 @@ new PurgeSvg({
 }
 ```
 
-* #### SVGs
+- #### SVGs
 
 A list of SVG files that should be purged and their output configuration. The list could be an array of files/globs or an array of objects.
 
@@ -148,7 +152,7 @@ new PurgeSvg({
             in: 'images/icons.svg', // full path
             out: 'build/images' // only folder
         },
-        
+
         // purged AND MERGED files will be saved in 'build/images/merged.svg'
         {
             in: 'icons/*.svg', // glob
@@ -159,7 +163,7 @@ new PurgeSvg({
 }
 ```
 
-* #### whitelist
+- #### whitelist
 
 Provides the option to whitelist ids of SVG sprites. The option can be used to whitelist ids for all files or only for specific SVG files.
 
@@ -179,12 +183,14 @@ The configuration file is a simple JavaScript file containing options:
 
 ```javascript
 module.exports = {
-    content: ['index.html'],
-    svgs: [{
-        in: 'images/*.svg'
-    }],
-    whitelist: {
-        '*': new Set(['rocket', 'building'])
-    }
-}
+	content: ['index.html'],
+	svgs: [
+		{
+			in: 'images/*.svg'
+		}
+	],
+	whitelist: {
+		'*': new Set(['rocket', 'building'])
+	}
+};
 ```
