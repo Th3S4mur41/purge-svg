@@ -1,8 +1,12 @@
-# PurgeSvg
+# Purge-Svg
 
-[![Build Status](https://travis-ci.org/Media24si/purge-svg.svg?branch=master)](https://travis-ci.org/Media24si/purge-svg)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?machine=basicLinux32gb&repo=411963580&ref=main)
 
-## What is PurgeSvg
+![Package version](https://img.shields.io/github/package-json/v/Th3S4mur41/purge-svg)
+![GitHub last commit](https://img.shields.io/github/last-commit/Th3S4mur41/purge-svg)
+![Release](https://github.com/Th3S4mur41/purge-svg/actions/workflows/on_push.yml/badge.svg?branch=main)
+
+## What is Purge-Svg
 
 If you're using external SVG sprites for your icon system there is a good chance you have a lot of unused icons at the end.
 
@@ -16,7 +20,7 @@ Be aware that external SVG sprites are not supported in any version of IE. If yo
 
 **:heart: Gratitude :heart:**
 
-This package was inspired (and some code copied) from [Purgecss](https://github.com/FullHuman/purgecss)
+This package was inspired (and some code copied) from [Purgecss](https://github.com/FullHuman/purgecss) and forked from [PurgeSvg](https://github.com/Media24si/purge-svg) which is no longer maintained
 
 ## Usage
 
