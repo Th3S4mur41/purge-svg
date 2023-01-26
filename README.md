@@ -22,7 +22,7 @@ Be aware that external SVG sprites are not supported in any version of IE. If yo
 
 **:heart: Gratitude :heart:**
 
-This package was inspired (and some code copied) from [Purgecss](https://github.com/FullHuman/purgecss)
+This package was inspired (and some code copied) from [Purgecss](https://github.com/FullHuman/purgecss) and forked from [PurgeSvg](https://github.com/Media24si/purge-svg) which is no longer maintained
 
 ## Usage
 
