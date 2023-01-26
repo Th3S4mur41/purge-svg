@@ -14,7 +14,7 @@
 	},
 	"main": "./src/index.js",
 	"bin": {
-		"purgesvg": "bin/purgesvg"
+		"purge-svg": "bin/purge-svg"
 	},
 	"directories": {
 		"test": "__tests__"
