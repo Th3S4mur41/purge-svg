@@ -1,4 +1,4 @@
-# Purge-Svg
+# purge-svg
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?machine=basicLinux32gb&repo=411963580&ref=main)
 
@@ -6,17 +6,19 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/Th3S4mur41/purge-svg)
 ![Release](https://github.com/Th3S4mur41/purge-svg/actions/workflows/on_push.yml/badge.svg?branch=main)
 
-## What is Purge-Svg
+This is a fork of [purge-svg from Media24si](https://github.com/Media24si/purge-svg) that is no longer seems to be actively maintained
+
+## What is purge-svg
 
 If you're using external SVG sprites for your icon system there is a good chance you have a lot of unused icons at the end.
 
-PurgeSvg will analyze your content and remove all unused icons. This will make your SVG file a lot smaller.
+purge-svg will analyze your content and remove all unused icons. This will make your SVG file a lot smaller.
 
 It also enables you to merge more SVG files into one and thereby reducing network requests.
 
 **:bangbang: Warning :bangbang:️**
 
-Be aware that external SVG sprites are not supported in any version of IE. If you need support for IE check out [svg4everybody](https://github.com/jonathantneal/svg4everybody). 
+Be aware that external SVG sprites are not supported in any version of IE. If you need support for IE check out [svg4everybody](https://github.com/jonathantneal/svg4everybody).
 
 **:heart: Gratitude :heart:**
 
@@ -29,14 +31,15 @@ This package was inspired (and some code copied) from [Purgecss](https://github.
 Start by installing the package globally
 
 ```bash
-npm i -g purgesvg
+npm i -g purge-svg
 ```
 
-PurgeSvg is available via a CLI. You can use the CLI by itself or with a configuration file.
+purge-svg is available via a CLI. You can use the CLI by itself or with a configuration file.
 
-To see the available options for the CLI: `purgesvg --help`
+To see the available options for the CLI: `purge-svg --help`
+
 ```bash
-purgesvg --content <content> --svgs <svgs> [option]
+purge-svg --content <content> --svgs <svgs> [option]
 
 Options:
   -c, --config     configuration file                                   [string]
@@ -49,65 +52,68 @@ Options:
 #### Using configuration file
 
 ```bash
-purgesvg --config /path/to/config.js
+purge-svg --config /path/to/config.js
 ```
 
 #### Options
 
 :heavy_check_mark: When not using a configuration file the `--content` and `--svgs` options are required.
 
-* ##### --content
+- ##### --content
 
 Content that should be analyzed. An array of filenames or glob.
 
-`purgesvg --content index.html /resource/assets/**/*.vue --svgs ...`
+`purge-svg --content index.html /resource/assets/**/*.vue --svgs ...`
 
-* ##### --svgs
+- ##### --svgs
 
 SVG files to purge. An array of filenames or glob.
 
-`purgesvg --content index.html --svgs /images/icons.svg /icons/solid.svg`
+`purge-svg --content index.html --svgs /images/icons.svg /icons/solid.svg`
 
-* ##### --out
+- ##### --out
 
-Output path for purged SVGs. 
+Output path for purged SVGs.
 
 The output path can be:
- * a directory - the purged files will be placed in this folder with the same filename as the SVG
- * a path to a file - all SVGs will be purged and merged into this file
- * missing - if this option is missing the purged SVGs will be put beside the original file as `filename.purged.svg`
 
-`purgesvg --content index.html --svgs /icons/*.svg --out /build/purged/icons.svg`
+- a directory - the purged files will be placed in this folder with the same filename as the SVG
+- a path to a file - all SVGs will be purged and merged into this file
+- missing - if this option is missing the purged SVGs will be put beside the original file as `filename.purged.svg`
 
-* ##### --whitelist
+`purge-svg --content index.html --svgs /icons/*.svg --out /build/purged/icons.svg`
+
+- ##### --whitelist
 
 List of whitelist ids. Id's will be whitelisted for all SVG files.
 
-`purgesvg --content index.html --svgs /icons/*.svg --whitelist rocket heart times`
+`purge-svg --content index.html --svgs /icons/*.svg --whitelist rocket heart times`
 
 ### JavaScript
 
 Start by installing the package as a development dependency
 
 ```bash
-npm i --save-dev purgesvg
+npm i --save-dev purge-svg
 ```
 
-You can use PurgeSvg in your javascript file. Just require the package, create the new PurgeSvg class, add configuration options and call the purge method.
+You can use purge-svg in your javascript file. Just require the package, create the new PurgeSvg class, add configuration options and call the purge method.
 
 The constructor accepts a configuration object or a path to the configuration file.
 
 ```javascript
-const PurgeSvg = require('purgesvg')
+const PurgeSvg = require('purge-svg');
 
 new PurgeSvg({
-    content: './__tests__/test_examples/clean_svgs/index.html',
-    svgs: [{
-        in: './__tests__/test_examples/clean_svgs/icons.svg',
-        out: tempFolder
-    }],
-    whitelist: {'*': ['building']}
-}).purge()
+	content: './__tests__/test_examples/clean_svgs/index.html',
+	svgs: [
+		{
+			in: './__tests__/test_examples/clean_svgs/icons.svg',
+			out: tempFolder
+		}
+	],
+	whitelist: { '*': ['building'] }
+}).purge();
 ```
 
 ### WebPack
@@ -118,7 +124,7 @@ new PurgeSvg({
 
 ### Options
 
-* #### content
+- #### content
 
 Content that should be analyzed. The content option is an array of files or [globs](https://github.com/isaacs/node-glob/blob/master/README.md#glob-primer).
 
@@ -129,7 +135,7 @@ new PurgeSvg({
 }
 ```
 
-* #### SVGs
+- #### SVGs
 
 A list of SVG files that should be purged and their output configuration. The list could be an array of files/globs or an array of objects.
 
@@ -152,7 +158,7 @@ new PurgeSvg({
             in: 'images/icons.svg', // full path
             out: 'build/images' // only folder
         },
-        
+
         // purged AND MERGED files will be saved in 'build/images/merged.svg'
         {
             in: 'icons/*.svg', // glob
@@ -163,7 +169,7 @@ new PurgeSvg({
 }
 ```
 
-* #### whitelist
+- #### whitelist
 
 Provides the option to whitelist ids of SVG sprites. The option can be used to whitelist ids for all files or only for specific SVG files.
 
@@ -183,12 +189,14 @@ The configuration file is a simple JavaScript file containing options:
 
 ```javascript
 module.exports = {
-    content: ['index.html'],
-    svgs: [{
-        in: 'images/*.svg'
-    }],
-    whitelist: {
-        '*': new Set(['rocket', 'building'])
-    }
-}
+	content: ['index.html'],
+	svgs: [
+		{
+			in: 'images/*.svg'
+		}
+	],
+	whitelist: {
+		'*': new Set(['rocket', 'building'])
+	}
+};
 ```
