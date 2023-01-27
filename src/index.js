@@ -104,8 +104,8 @@ class PurgeSvg {
 			.reduce(flatten, []);
 	}
 
-    static extractContentIds (content) {
-        const regex = /<use \S.*href="([\S]+)#([\S]+)"/g
+	static extractContentIds(content) {
+		const regex = /<use \S.*href="([\S]+)#([\S]+)"/g;
 
 		const icons = {};
 
