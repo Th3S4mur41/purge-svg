@@ -1,3 +1,15 @@
+## [2.0.1](https://github.com/Th3S4mur41/purge-svg/compare/v2.0.0...v2.0.1) (2023-01-27)
+
+
+### Bug Fixes
+
+* replace seprecated set-output command ([4356c13](https://github.com/Th3S4mur41/purge-svg/commit/4356c13a4c1ceb92169543be918bdad4f912bfc2))
+
+
+### Dependencies and Other Build Updates
+
+* add scope to package name ([cda7d28](https://github.com/Th3S4mur41/purge-svg/commit/cda7d28450c4c320aa396a2b3462b1f3c667d04a))
+
 ## [2.0.0](https://github.com/Th3S4mur41/purge-svg/compare/v1.1.0...v2.0.0) (2023-01-27)
 
 
