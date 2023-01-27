@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/Th3S4mur41/purge-svg/compare/v2.0.1...v2.0.2) (2023-01-27)
+
+
+### Bug Fixes
+
+* support href link format ([#12](https://github.com/Th3S4mur41/purge-svg/issues/12)) ([80f9a95](https://github.com/Th3S4mur41/purge-svg/commit/80f9a95a589fa0b7af0f8033ac3cde9c40393a58))
+
 ## [2.0.1](https://github.com/Th3S4mur41/purge-svg/compare/v2.0.0...v2.0.1) (2023-01-27)
 
 
