@@ -31,7 +31,7 @@ This package was inspired (and some code copied) from [Purgecss](https://github.
 Start by installing the package globally
 
 ```bash
-npm i -g purge-svg
+npm i -g @th3s4mur41/purge-svg
 ```
 
 purge-svg is available via a CLI. You can use the CLI by itself or with a configuration file.
