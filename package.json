@@ -38,7 +38,8 @@
 		"lint:js": "eslint -c .eslintrc \"src/ __tests__\" --no-error-on-unmatched-pattern --ignore-path .gitignore",
 		"lint:js:fix": "eslint -c .eslintrc \"src/ __tests__\" --no-error-on-unmatched-pattern --ignore-path .gitignore --fix",
 		"lint:style": "prettier --check --ignore-unknown .",
-		"lint:style:fix": "prettier --write --ignore-unknown ."
+		"lint:style:fix": "prettier --write --ignore-unknown .",
+		"release": "semantic-release"
 	},
 	"repository": {
 		"type": "git",
