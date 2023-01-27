@@ -1,0 +1,39 @@
+# This is workflow runs on push
+#
+name: Release
+
+# Controls when the action will run.
+on:
+  # Trigger workflow for pull requests.
+  push:
+    branches: [main]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  npm-lint:
+    name: '▶️ actions'
+    uses: ./.github/workflows/npm-lint.yml
+
+  npm-test:
+    name: '▶️ actions'
+    needs: [npm-lint]
+    uses: ./.github/workflows/npm-test.yml
+
+  codeql:
+    name: '▶️ actions'
+    needs: [npm-lint]
+    uses: ./.github/workflows/codeql.yml
+
+  release:
+    name: '▶️ actions'
+    needs: [npm-lint, npm-test, codeql]
+    uses: ./.github/workflows/semantic-release.yml
+    secrets:
+      GH_TOKEN: ${{ secrets.GH_TOKEN }} # Token with repo write permission & admin rights to push to protected branches
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

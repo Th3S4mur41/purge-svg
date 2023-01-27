@@ -1,53 +1,70 @@
 {
-    "name": "purgesvg",
-    "version": "1.1.0",
-    "license": "MIT",
-    "description": "Remove unused svg symbols and optionaly merge svg files",
-    "homepage": "https://github.com/Media24si/purge-svg",
-    "contributors": [
-        "Bostjan Oblak <bostjan@muha.cc> (https://bostjan.cloud/)",
-        "Jernej Pogačar"
-    ],
-    "bugs": {
-        "url": "https://github.com/Media24si/purge-svg/issues"
-    },
-    "main": "./src/index.js",
-    "bin": {
-        "purgesvg": "bin/purgesvg"
-    },
-    "directories": {
-        "test": "__tests__"
-    },
-    "keywords": [
-        "optimization",
-        "remove",
-        "unused",
-        "svg",
-        "purge"
-    ],
-    "scripts": {
-        "test": "jest __tests__/.+.test.js",
-        "test-report": "npm run test -- --collectCoverage",
-        "lint": "eslint -c .eslintrc src/ __tests__"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Media24si/purge-svg.git"
-    },
-    "dependencies": {
-        "glob": "^7.1.6",
-        "xml-js": "^1.6.11",
-        "yargs": "^16.2.0"
-    },
-    "devDependencies": {
-        "app-root-path": "^3.0.0",
-        "babel-eslint": "^10.1.0",
-        "eslint": "^7.16.0",
-        "eslint-config-standard": "^16.0.2",
-        "eslint-plugin-import": "^2.22.1",
-        "eslint-plugin-node": "^11.1.0",
-        "eslint-plugin-promise": "^4.2.0",
-        "eslint-plugin-standard": "^5.0.0",
-        "jest": "^26.6.3"
-    }
+	"name": "@th3s4mur41/purge-svg",
+	"version": "2.0.1",
+	"license": "LICENSE",
+	"description": "Remove unused svg symbols and optionaly merge svg files",
+	"homepage": "https://github.com/Th3S4mur41/purge-svg",
+	"contributors": [
+		"Michaël Vanderheyden <hello@th3s4mur41.me> (https://th3s4mur41.me)",
+		"Bostjan Oblak <bostjan@muha.cc> (https://bostjan.cloud/)",
+		"Jernej Pogačar"
+	],
+	"bugs": {
+		"url": "https://github.com/Th3S4mur41/purge-svg/issues"
+	},
+	"main": "./src/index.js",
+	"bin": {
+		"purge-svg": "bin/purge-svg"
+	},
+	"directories": {
+		"test": "__tests__"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"funding": "https://github.com/sponsors/Th3S4mur41",
+	"keywords": [
+		"optimization",
+		"remove",
+		"unused",
+		"svg",
+		"purge"
+	],
+	"scripts": {
+		"test": "jest __tests__/.+.test.js",
+		"test-report": "npm run test -- --collectCoverage",
+		"lint": "npm run lint:js && npm run lint:style",
+		"lint:fix": "npm run lint:js:fix && npm run lint:style:fix",
+		"lint:js": "eslint -c .eslintrc \"src/ __tests__\" --no-error-on-unmatched-pattern --ignore-path .gitignore",
+		"lint:js:fix": "eslint -c .eslintrc \"src/ __tests__\" --no-error-on-unmatched-pattern --ignore-path .gitignore --fix",
+		"lint:style": "prettier --check --ignore-unknown .",
+		"lint:style:fix": "prettier --write --ignore-unknown .",
+		"release": "semantic-release"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Th3S4mur41/purge-svg.git"
+	},
+	"dependencies": {
+		"glob": "^8.1.0",
+		"xml-js": "^1.6.11",
+		"yargs": "^16.2.0"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^17.4.2",
+		"@commitlint/config-conventional": "^17.4.2",
+		"@semantic-release/changelog": "^6.0.2",
+		"@semantic-release/git": "^10.0.1",
+		"app-root-path": "^3.1.0",
+		"babel-eslint": "^10.1.0",
+		"eslint": "^7.16.0",
+		"eslint-config-standard": "^16.0.3",
+		"eslint-plugin-import": "^2.27.5",
+		"eslint-plugin-node": "^11.1.0",
+		"eslint-plugin-promise": "^4.3.1",
+		"eslint-plugin-standard": "^5.0.0",
+		"jest": "^26.6.3",
+		"prettier": "^2.8.1",
+		"semantic-release": "^20.1.0"
+	}
 }
