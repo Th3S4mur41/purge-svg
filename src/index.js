@@ -66,7 +66,7 @@ class PurgeSvg {
 					return [filePath];
 				}
 
-				return [...glob.sync(filePath, { nodir: true })];
+				return [...glob.globSync(filePath, { nodir: true })];
 			})
 			.reduce(flatten, [])
 			.filter(removeDuplicates)
@@ -80,7 +80,7 @@ class PurgeSvg {
 					svg = { in: svg };
 				}
 
-				const paths = fs.existsSync(svg.in) ? [svg.in] : glob.sync(svg.in, { nodir: true });
+				const paths = fs.existsSync(svg.in) ? [svg.in] : glob.globSync(svg.in, { nodir: true });
 
 				return paths.map((svgPath) => {
 					let out = svg.out || path.resolve(svgPath).replace('.svg', '.purged.svg');
