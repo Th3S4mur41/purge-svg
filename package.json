@@ -1,6 +1,6 @@
 {
 	"name": "@th3s4mur41/purge-svg",
-	"version": "2.0.2",
+	"version": "2.0.3",
 	"license": "LICENSE",
 	"description": "Remove unused svg symbols and optionaly merge svg files",
 	"homepage": "https://github.com/Th3S4mur41/purge-svg",

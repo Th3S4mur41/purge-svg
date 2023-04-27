@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/Th3S4mur41/purge-svg/compare/v2.0.2...v2.0.3) (2023-04-27)
+
+
+### Dependencies and Other Build Updates
+
+* **deps:** bump yargs from 17.7.1 to 17.7.2 ([#56](https://github.com/Th3S4mur41/purge-svg/issues/56)) ([c2f2330](https://github.com/Th3S4mur41/purge-svg/commit/c2f233055210a30c97f66d4c4846240fc87a90d7))
+
 ## [2.0.2](https://github.com/Th3S4mur41/purge-svg/compare/v2.0.1...v2.0.2) (2023-01-27)
 
 
