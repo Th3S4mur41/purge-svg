@@ -59,7 +59,7 @@ class PurgeSvg {
 			paths = [paths];
 		}
 
-		paths =  paths
+		paths = paths
 			.map((filePath) => {
 				if (fs.existsSync(filePath)) {
 					return [filePath];
@@ -70,7 +70,7 @@ class PurgeSvg {
 			.reduce(flatten, [])
 			.map((filePath) => path.resolve(filePath));
 
-			return [... new Set(paths)];
+		return [...new Set(paths)];
 	}
 
 	static prepareSvgPaths(svgs) {
