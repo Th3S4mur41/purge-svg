@@ -18,7 +18,6 @@ const defaultOptions = {
 	whitelist: { '*': new Set() }
 };
 
-const removeDuplicates = (filePath, index, array) => array.indexOf(filePath) === index;
 const flatten = (arr, initialVal) => [...arr, ...initialVal];
 
 class PurgeSvg {
@@ -60,7 +59,7 @@ class PurgeSvg {
 			paths = [paths];
 		}
 
-		return paths
+		paths = paths
 			.map((filePath) => {
 				if (fs.existsSync(filePath)) {
 					return [filePath];
@@ -69,8 +68,9 @@ class PurgeSvg {
 				return [...glob.sync(filePath, { nodir: true })];
 			})
 			.reduce(flatten, [])
-			.filter(removeDuplicates)
 			.map((filePath) => path.resolve(filePath));
+
+		return [...new Set(paths)];
 	}
 
 	static prepareSvgPaths(svgs) {

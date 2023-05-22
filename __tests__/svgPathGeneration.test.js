@@ -67,15 +67,15 @@ describe('svg paths generation', () => {
 	it('should change glob path to array of objects', () => {
 		expect(PurgeSvg.prepareSvgPaths([`${root}clean_svgs/*.svg`])).toEqual([
 			{
-				filename: 'icons-2.svg',
-				in: `${rootPath}/__tests__/test_examples/clean_svgs/icons-2.svg`,
-				out: `${rootPath}/__tests__/test_examples/clean_svgs/icons-2.purged.svg`,
-				prefix: ''
-			},
-			{
 				filename: 'icons.svg',
 				in: `${rootPath}/__tests__/test_examples/clean_svgs/icons.svg`,
 				out: `${rootPath}/__tests__/test_examples/clean_svgs/icons.purged.svg`,
+				prefix: ''
+			},
+			{
+				filename: 'icons-2.svg',
+				in: `${rootPath}/__tests__/test_examples/clean_svgs/icons-2.svg`,
+				out: `${rootPath}/__tests__/test_examples/clean_svgs/icons-2.purged.svg`,
 				prefix: ''
 			}
 		]);
@@ -95,15 +95,15 @@ describe('svg paths generation', () => {
 	it('should change object with only in (glob) to full object', () => {
 		expect(PurgeSvg.prepareSvgPaths([{ in: `${rootPath}/__tests__/test_examples/clean_svgs/*.svg` }])).toEqual([
 			{
-				filename: 'icons-2.svg',
-				in: `${rootPath}/__tests__/test_examples/clean_svgs/icons-2.svg`,
-				out: `${rootPath}/__tests__/test_examples/clean_svgs/icons-2.purged.svg`,
-				prefix: ''
-			},
-			{
 				filename: 'icons.svg',
 				in: `${rootPath}/__tests__/test_examples/clean_svgs/icons.svg`,
 				out: `${rootPath}/__tests__/test_examples/clean_svgs/icons.purged.svg`,
+				prefix: ''
+			},
+			{
+				filename: 'icons-2.svg',
+				in: `${rootPath}/__tests__/test_examples/clean_svgs/icons-2.svg`,
+				out: `${rootPath}/__tests__/test_examples/clean_svgs/icons-2.purged.svg`,
 				prefix: ''
 			}
 		]);
@@ -139,14 +139,14 @@ describe('svg paths generation', () => {
 			])
 		).toEqual([
 			{
-				filename: 'icons-2.svg',
-				in: `${rootPath}/__tests__/test_examples/clean_svgs/icons-2.svg`,
+				filename: 'icons.svg',
+				in: `${rootPath}/__tests__/test_examples/clean_svgs/icons.svg`,
 				out: `${rootPath}/__tests__/test_examples/test_folder/icons.svg`,
 				prefix: 'foo'
 			},
 			{
-				filename: 'icons.svg',
-				in: `${rootPath}/__tests__/test_examples/clean_svgs/icons.svg`,
+				filename: 'icons-2.svg',
+				in: `${rootPath}/__tests__/test_examples/clean_svgs/icons-2.svg`,
 				out: `${rootPath}/__tests__/test_examples/test_folder/icons.svg`,
 				prefix: 'foo'
 			}
