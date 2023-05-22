@@ -1,9 +1,9 @@
 /* eslint no-new: "off" */
-const appRoot = require('app-root-path');
-const fs = require('fs');
-const { xml2js } = require('xml-js');
+const appRoot = require("app-root-path");
+const fs = require("fs");
+const { xml2js } = require("xml-js");
 
-const PurgeSvg = require('./../src');
+const PurgeSvg = require("./../src");
 const rootPath = appRoot.path;
 
 const deleteFolderRecursive = (path) => {
@@ -22,7 +22,7 @@ const deleteFolderRecursive = (path) => {
 	}
 };
 
-describe('purge method', () => {
+describe("purge method", () => {
 	const tempFolder = `${rootPath}/__tests__/test_examples/clean_svgs/temp/`;
 
 	beforeEach(() => {
@@ -38,125 +38,125 @@ describe('purge method', () => {
 		expect(fs.existsSync(tempFolder)).toBeFalsy();
 	});
 
-	it('should create a new svg file without unneeded symbols', () => {
+	it("should create a new svg file without unneeded symbols", () => {
 		const iconPath = `${tempFolder}icons.svg`;
 
 		new PurgeSvg({
-			content: './__tests__/test_examples/clean_svgs/index.html',
+			content: "./__tests__/test_examples/clean_svgs/index.html",
 			svgs: [
 				{
-					in: './__tests__/test_examples/clean_svgs/icons.svg',
-					out: tempFolder
-				}
-			]
+					in: "./__tests__/test_examples/clean_svgs/icons.svg",
+					out: tempFolder,
+				},
+			],
 		}).purge();
 
 		expect(fs.existsSync(iconPath)).toBeTruthy();
 
-		let fileContent = xml2js(fs.readFileSync(iconPath, 'utf8'), { compact: true });
+		let fileContent = xml2js(fs.readFileSync(iconPath, "utf8"), { compact: true });
 		fileContent = JSON.stringify(fileContent);
 
-		expect(fileContent.includes('building')).toBeFalsy();
-		expect(fileContent.includes('bookmark')).toBeTruthy();
+		expect(fileContent.includes("building")).toBeFalsy();
+		expect(fileContent.includes("bookmark")).toBeTruthy();
 	});
 
-	it('should work with single symbol too as it is not an array by default', () => {
+	it("should work with single symbol too as it is not an array by default", () => {
 		const iconPath = `${tempFolder}icons-2.svg`;
 
 		new PurgeSvg({
-			content: './__tests__/test_examples/clean_svgs/index-2.html',
+			content: "./__tests__/test_examples/clean_svgs/index-2.html",
 			svgs: [
 				{
-					in: './__tests__/test_examples/clean_svgs/icons-2.svg',
-					out: tempFolder
-				}
-			]
-		}).purge();
-
-		expect(fs.existsSync(iconPath)).toBeTruthy();
-
-		let fileContent = xml2js(fs.readFileSync(iconPath, 'utf8'), { compact: true });
-		fileContent = JSON.stringify(fileContent);
-
-		expect(fileContent.includes('building')).toBeFalsy();
-		expect(fileContent.includes('bookmark')).toBeTruthy();
-	});
-
-	it('should not remove whitelisted symbols', () => {
-		const iconPath = `${tempFolder}icons.svg`;
-
-		new PurgeSvg({
-			content: './__tests__/test_examples/clean_svgs/index.html',
-			svgs: [
-				{
-					in: './__tests__/test_examples/clean_svgs/icons.svg',
-					out: tempFolder
-				}
+					in: "./__tests__/test_examples/clean_svgs/icons-2.svg",
+					out: tempFolder,
+				},
 			],
-			whitelist: { '*': ['building'] }
 		}).purge();
 
 		expect(fs.existsSync(iconPath)).toBeTruthy();
 
-		let fileContent = xml2js(fs.readFileSync(iconPath, 'utf8'), { compact: true });
+		let fileContent = xml2js(fs.readFileSync(iconPath, "utf8"), { compact: true });
 		fileContent = JSON.stringify(fileContent);
 
-		expect(fileContent.includes('building')).toBeTruthy();
-		expect(fileContent.includes('bookmark')).toBeTruthy();
+		expect(fileContent.includes("building")).toBeFalsy();
+		expect(fileContent.includes("bookmark")).toBeTruthy();
 	});
 
-	it('should word with symbols wrapped in defs', () => {
+	it("should not remove whitelisted symbols", () => {
 		const iconPath = `${tempFolder}icons.svg`;
 
 		new PurgeSvg({
-			content: './__tests__/test_examples/defs_svgs/index.html',
+			content: "./__tests__/test_examples/clean_svgs/index.html",
 			svgs: [
 				{
-					in: './__tests__/test_examples/defs_svgs/icons.svg',
-					out: tempFolder
-				}
+					in: "./__tests__/test_examples/clean_svgs/icons.svg",
+					out: tempFolder,
+				},
 			],
-			whitelist: { '*': ['building'] }
+			whitelist: { "*": ["building"] },
 		}).purge();
 
 		expect(fs.existsSync(iconPath)).toBeTruthy();
 
-		let fileContent = xml2js(fs.readFileSync(iconPath, 'utf8'), { compact: true });
+		let fileContent = xml2js(fs.readFileSync(iconPath, "utf8"), { compact: true });
 		fileContent = JSON.stringify(fileContent);
 
-		expect(fileContent.includes('building')).toBeTruthy();
-		expect(fileContent.includes('bookmark')).toBeTruthy();
+		expect(fileContent.includes("building")).toBeTruthy();
+		expect(fileContent.includes("bookmark")).toBeTruthy();
 	});
 
-	it('should not break with plain svg', () => {
+	it("should word with symbols wrapped in defs", () => {
 		const iconPath = `${tempFolder}icons.svg`;
 
 		new PurgeSvg({
-			content: './__tests__/test_examples/clean_svgs/index.html',
+			content: "./__tests__/test_examples/defs_svgs/index.html",
 			svgs: [
 				{
-					in: './__tests__/test_examples/clean_svgs/*.svg',
-					out: tempFolder
+					in: "./__tests__/test_examples/defs_svgs/icons.svg",
+					out: tempFolder,
+				},
+			],
+			whitelist: { "*": ["building"] },
+		}).purge();
+
+		expect(fs.existsSync(iconPath)).toBeTruthy();
+
+		let fileContent = xml2js(fs.readFileSync(iconPath, "utf8"), { compact: true });
+		fileContent = JSON.stringify(fileContent);
+
+		expect(fileContent.includes("building")).toBeTruthy();
+		expect(fileContent.includes("bookmark")).toBeTruthy();
+	});
+
+	it("should not break with plain svg", () => {
+		const iconPath = `${tempFolder}icons.svg`;
+
+		new PurgeSvg({
+			content: "./__tests__/test_examples/clean_svgs/index.html",
+			svgs: [
+				{
+					in: "./__tests__/test_examples/clean_svgs/*.svg",
+					out: tempFolder,
 				},
 				{
-					in: './__tests__/test_examples/single.svg',
-					out: tempFolder
-				}
+					in: "./__tests__/test_examples/single.svg",
+					out: tempFolder,
+				},
 			],
-			whitelist: {}
+			whitelist: {},
 		}).purge();
 
 		expect(fs.existsSync(iconPath)).toBeTruthy();
 
-		let fileContent = xml2js(fs.readFileSync(iconPath, 'utf8'), { compact: true });
+		let fileContent = xml2js(fs.readFileSync(iconPath, "utf8"), { compact: true });
 		fileContent = JSON.stringify(fileContent);
 
-		expect(fileContent.includes('building')).toBeFalsy();
-		expect(fileContent.includes('bookmark')).toBeTruthy();
+		expect(fileContent.includes("building")).toBeFalsy();
+		expect(fileContent.includes("bookmark")).toBeTruthy();
 	});
 });
 
-describe('purge and merge', () => {
+describe("purge and merge", () => {
 	const folder = `${rootPath}/__tests__/test_examples/merge/`;
 	const tempFolder = `${folder}temp/`;
 
@@ -173,7 +173,7 @@ describe('purge and merge', () => {
 		expect(fs.existsSync(tempFolder)).toBeFalsy();
 	});
 
-	it('should purge and merge if same output specified', () => {
+	it("should purge and merge if same output specified", () => {
 		const iconPath = `${tempFolder}icons.svg`;
 
 		new PurgeSvg({
@@ -181,21 +181,21 @@ describe('purge and merge', () => {
 			svgs: [
 				{
 					in: `${folder}*.svg`,
-					out: iconPath
-				}
+					out: iconPath,
+				},
 			],
-			whitelist: {}
+			whitelist: {},
 		}).purge();
 
 		expect(fs.existsSync(iconPath)).toBeTruthy();
 
-		let fileContent = xml2js(fs.readFileSync(iconPath, 'utf8'), { compact: true });
+		let fileContent = xml2js(fs.readFileSync(iconPath, "utf8"), { compact: true });
 		fileContent = JSON.stringify(fileContent);
 
-		expect(fileContent.includes('building')).toBeFalsy();
-		expect(fileContent.includes('bookmark')).toBeTruthy();
+		expect(fileContent.includes("building")).toBeFalsy();
+		expect(fileContent.includes("bookmark")).toBeTruthy();
 
-		expect(fileContent.includes('right-arrow')).toBeFalsy();
-		expect(fileContent.includes('close')).toBeTruthy();
+		expect(fileContent.includes("right-arrow")).toBeFalsy();
+		expect(fileContent.includes("close")).toBeTruthy();
 	});
 });

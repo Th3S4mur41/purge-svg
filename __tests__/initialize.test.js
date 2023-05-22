@@ -1,91 +1,91 @@
 /* eslint no-new: "off" */
-const PurgeSvg = require('./../src');
+const PurgeSvg = require("./../src");
 const {
 	ERROR_CONFIG_FILE_LOADING,
 	ERROR_MISSING_CONTENT,
 	ERROR_MISSING_SVGS,
-	ERROR_WHITELIST_TYPE
-} = require('./../src/constants');
+	ERROR_WHITELIST_TYPE,
+} = require("./../src/constants");
 
-describe('initialize purgesvg', () => {
-	it('throws an error without options', () => {
+describe("initialize purgesvg", () => {
+	it("throws an error without options", () => {
 		expect(() => {
 			new PurgeSvg();
 		}).toThrow(Error);
 	});
 
-	it('throws an error with invalid config path', () => {
+	it("throws an error with invalid config path", () => {
 		expect(() => {
-			new PurgeSvg('invalid.config.js');
+			new PurgeSvg("invalid.config.js");
 		}).toThrow(ERROR_CONFIG_FILE_LOADING);
 	});
 
-	it('throws an error without content option', () => {
+	it("throws an error without content option", () => {
 		expect(() => {
 			new PurgeSvg({
-				svgs: ['icons.svg']
+				svgs: ["icons.svg"],
 			});
 		}).toThrow(ERROR_MISSING_CONTENT);
 
 		expect(() => {
 			new PurgeSvg({
-				svgs: ['icons.svg'],
-				content: []
+				svgs: ["icons.svg"],
+				content: [],
 			});
 		}).toThrow(ERROR_MISSING_CONTENT);
 	});
 
-	it('throws an error without svgs option', () => {
+	it("throws an error without svgs option", () => {
 		expect(() => {
 			new PurgeSvg({
-				content: 'index.html'
+				content: "index.html",
 			});
 		}).toThrow(ERROR_MISSING_SVGS);
 
 		expect(() => {
 			new PurgeSvg({
-				content: 'index.html',
-				svgs: []
+				content: "index.html",
+				svgs: [],
 			});
 		}).toThrow(ERROR_MISSING_SVGS);
 	});
 
-	it('throws an error with an incorrect whitelist option', () => {
+	it("throws an error with an incorrect whitelist option", () => {
 		expect(() => {
 			new PurgeSvg({
-				content: 'index.html',
-				svgs: ['icons.svg'],
-				whitelist: []
+				content: "index.html",
+				svgs: ["icons.svg"],
+				whitelist: [],
 			});
 		}).toThrow(ERROR_WHITELIST_TYPE);
 
 		expect(() => {
 			new PurgeSvg({
-				content: 'index.html',
-				svgs: ['icons.svg'],
-				whitelist: 'invalid'
+				content: "index.html",
+				svgs: ["icons.svg"],
+				whitelist: "invalid",
 			});
 		}).toThrow(ERROR_WHITELIST_TYPE);
 	});
 
-	it('sets up options when providing an object', () => {
+	it("sets up options when providing an object", () => {
 		const ps = new PurgeSvg({
-			content: ['index.html'],
-			svgs: ['icons.svg']
+			content: ["index.html"],
+			svgs: ["icons.svg"],
 		});
 
 		expect(ps.options).toMatchObject({
-			content: ['index.html'],
-			svgs: ['icons.svg']
+			content: ["index.html"],
+			svgs: ["icons.svg"],
 		});
 	});
 
-	it('sets up options from a config file', () => {
-		const ps = new PurgeSvg('./__tests__/test_examples/purgesvg.config.js');
+	it("sets up options from a config file", () => {
+		const ps = new PurgeSvg("./__tests__/test_examples/purgesvg.config.js");
 
 		expect(ps.options).toMatchObject({
-			content: ['./__tests__/test_examples/extract_content_ids/index.html'],
-			svgs: [{ in: './__tests__/test_examples/svgs/icons.svg' }]
+			content: ["./__tests__/test_examples/extract_content_ids/index.html"],
+			svgs: [{ in: "./__tests__/test_examples/svgs/icons.svg" }],
 		});
 	});
 });
