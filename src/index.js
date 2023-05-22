@@ -1,7 +1,7 @@
-const path = require('path');
-const { xml2js, js2xml } = require('xml-js');
-const fs = require('fs');
-const glob = require('glob');
+const path = require("path");
+const { xml2js, js2xml } = require("xml-js");
+const fs = require("fs");
+const glob = require("glob");
 
 const {
 	CONFIG_FILENAME,
@@ -9,20 +9,20 @@ const {
 	ERROR_MISSING_CONTENT,
 	ERROR_MISSING_SVGS,
 	ERROR_OPTIONS_TYPE,
-	ERROR_WHITELIST_TYPE
-} = require('./constants');
+	ERROR_WHITELIST_TYPE,
+} = require("./constants");
 
 const defaultOptions = {
 	content: [],
 	svgs: [],
-	whitelist: { '*': new Set() }
+	whitelist: { "*": new Set() },
 };
 
 const flatten = (arr, initialVal) => [...arr, ...initialVal];
 
 class PurgeSvg {
 	constructor(options) {
-		if (typeof options === 'string' || typeof options === 'undefined') {
+		if (typeof options === "string" || typeof options === "undefined") {
 			options = PurgeSvg.loadConfigFile(options);
 		}
 
@@ -40,7 +40,7 @@ class PurgeSvg {
 	}
 
 	static validateOptions(options) {
-		if (typeof options !== 'object') {
+		if (typeof options !== "object") {
 			throw new TypeError(ERROR_OPTIONS_TYPE);
 		}
 		if (!options.content || !options.content.length) {
@@ -49,13 +49,13 @@ class PurgeSvg {
 		if (!options.svgs || !options.svgs.length) {
 			throw new TypeError(ERROR_MISSING_SVGS);
 		}
-		if (options.whitelist && (typeof options.whitelist !== 'object' || Array.isArray(options.whitelist))) {
+		if (options.whitelist && (typeof options.whitelist !== "object" || Array.isArray(options.whitelist))) {
 			throw new TypeError(ERROR_WHITELIST_TYPE);
 		}
 	}
 
 	static globPaths(paths) {
-		if (typeof paths === 'string') {
+		if (typeof paths === "string") {
 			paths = [paths];
 		}
 
@@ -76,20 +76,20 @@ class PurgeSvg {
 	static prepareSvgPaths(svgs) {
 		return svgs
 			.map((svg) => {
-				if (typeof svg === 'string') {
+				if (typeof svg === "string") {
 					svg = { in: svg };
 				}
 
 				const paths = fs.existsSync(svg.in) ? [svg.in] : glob.sync(svg.in, { nodir: true });
 
 				return paths.map((svgPath) => {
-					let out = svg.out || path.resolve(svgPath).replace('.svg', '.purged.svg');
+					let out = svg.out || path.resolve(svgPath).replace(".svg", ".purged.svg");
 
 					// check if output is a folder
-					if (!out.endsWith('.svg')) {
+					if (!out.endsWith(".svg")) {
 						out = path.format({
 							dir: out,
-							base: path.basename(svgPath)
+							base: path.basename(svgPath),
 						});
 					}
 
@@ -97,7 +97,7 @@ class PurgeSvg {
 						filename: path.basename(svgPath),
 						in: path.resolve(svgPath),
 						out,
-						prefix: svg.prefix || ''
+						prefix: svg.prefix || "",
 					};
 				});
 			})
@@ -110,7 +110,7 @@ class PurgeSvg {
 		const icons = {};
 
 		PurgeSvg.globPaths(content).forEach((filePath) => {
-			const content = fs.readFileSync(filePath, 'utf-8');
+			const content = fs.readFileSync(filePath, "utf-8");
 
 			let m;
 			while ((m = regex.exec(content)) !== null) {
@@ -140,18 +140,18 @@ class PurgeSvg {
 			const ids = new Set([
 				...(contentIds[svgObj.filename] || []),
 				...(this.options.whitelist[svgObj.filename] || []),
-				...(this.options.whitelist['*'] || [])
+				...(this.options.whitelist["*"] || []),
 			]);
 
-			const svg = xml2js(fs.readFileSync(svgObj.in, 'utf8'), { compact: true });
+			const svg = xml2js(fs.readFileSync(svgObj.in, "utf8"), { compact: true });
 
 			let symbols = svg.svg.symbol;
 
-			if (typeof symbols === 'undefined') {
+			if (typeof symbols === "undefined") {
 				symbols = svg.svg.defs.symbol;
 			}
 
-			if (typeof symbols === 'undefined') {
+			if (typeof symbols === "undefined") {
 				return;
 			}
 
@@ -170,17 +170,17 @@ class PurgeSvg {
 			const svg = {
 				_declaration: {
 					_attributes: {
-						version: '1.0',
-						encoding: 'UTF-8'
-					}
+						version: "1.0",
+						encoding: "UTF-8",
+					},
 				},
 				svg: {
 					_attributes: {
-						xmlns: 'http://www.w3.org/2000/svg',
-						style: 'display: none;'
+						xmlns: "http://www.w3.org/2000/svg",
+						style: "display: none;",
 					},
-					symbol: outSvgs[filename]
-				}
+					symbol: outSvgs[filename],
+				},
 			};
 
 			if (!fs.existsSync(path.dirname(filename))) {

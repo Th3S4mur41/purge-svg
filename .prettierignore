@@ -28,6 +28,13 @@ yarn-error.log*
 
 /coverage
 
+# Extensions covered by Rome
+*.js
+*.cjs
+*.mjs
+*.ts
+*.json
+
 # Generated files
 package-lock.json
 CHANGELOG.md
