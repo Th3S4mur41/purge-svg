@@ -51,7 +51,7 @@ if (typeof argv.svgs === 'undefined' || typeof argv.content === 'undefined') {
 options = {
     content: argv.content,
     svgs: argv.svgs.map((path) => {
-        svgObj = {
+        const svgObj = {
             in: path,
         }
 
