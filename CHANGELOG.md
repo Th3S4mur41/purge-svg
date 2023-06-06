@@ -1,3 +1,15 @@
+## [2.0.5](https://github.com/Th3S4mur41/purge-svg/compare/v2.0.4...v2.0.5) (2023-06-06)
+
+
+### Dependencies and Other Build Updates
+
+* **deps-dev:** bump @commitlint/cli from 17.6.3 to 17.6.5 ([#67](https://github.com/Th3S4mur41/purge-svg/issues/67)) ([2f35269](https://github.com/Th3S4mur41/purge-svg/commit/2f352690c7a37db344d7415ad9550f872d53a346))
+* **deps-dev:** bump @commitlint/config-conventional ([#66](https://github.com/Th3S4mur41/purge-svg/issues/66)) ([aa8dcf3](https://github.com/Th3S4mur41/purge-svg/commit/aa8dcf39ccab1f29e856da2d088e95e20ba49b19))
+* **deps-dev:** bump rome from 12.1.2 to 12.1.3 ([#68](https://github.com/Th3S4mur41/purge-svg/issues/68)) ([4eb2398](https://github.com/Th3S4mur41/purge-svg/commit/4eb23986ec977341e72fd731df3c8748a1da47bc))
+* **deps-dev:** bump semantic-release from 21.0.2 to 21.0.3 ([#69](https://github.com/Th3S4mur41/purge-svg/issues/69)) ([fd4ca3a](https://github.com/Th3S4mur41/purge-svg/commit/fd4ca3a32f086cfc512fea2a0bee2831938b280a))
+* **deps:** bump glob from 10.2.6 to 10.2.7 ([#70](https://github.com/Th3S4mur41/purge-svg/issues/70)) ([c723757](https://github.com/Th3S4mur41/purge-svg/commit/c72375785d0383f94e78df57ac2a2e4cdd83377a))
+* replace eslint through rome ([#65](https://github.com/Th3S4mur41/purge-svg/issues/65)) ([6f4d09b](https://github.com/Th3S4mur41/purge-svg/commit/6f4d09b5ecc7479ecd7eca914ba332a71ab6184d))
+
 ## [2.0.4](https://github.com/Th3S4mur41/purge-svg/compare/v2.0.3...v2.0.4) (2023-05-22)
 
 
