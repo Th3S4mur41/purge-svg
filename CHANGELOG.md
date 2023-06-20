@@ -1,3 +1,11 @@
+## [2.0.6](https://github.com/Th3S4mur41/purge-svg/compare/v2.0.5...v2.0.6) (2023-06-20)
+
+
+### Dependencies and Other Build Updates
+
+* **deps-dev:** bump semantic-release from 21.0.3 to 21.0.5 ([#71](https://github.com/Th3S4mur41/purge-svg/issues/71)) ([87be9ea](https://github.com/Th3S4mur41/purge-svg/commit/87be9eacb6eec772aff0cb8835abd09330002daa))
+* **deps:** bump Namchee/conventional-pr from 0.12.1 to 0.13.0 ([#72](https://github.com/Th3S4mur41/purge-svg/issues/72)) ([c48d8b7](https://github.com/Th3S4mur41/purge-svg/commit/c48d8b79cb4191eb88f9d0cb03be37b5686d64d1))
+
 ## [2.0.5](https://github.com/Th3S4mur41/purge-svg/compare/v2.0.4...v2.0.5) (2023-06-06)
 
 
