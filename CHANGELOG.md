@@ -1,3 +1,12 @@
+## [2.0.8](https://github.com/Th3S4mur41/purge-svg/compare/v2.0.7...v2.0.8) (2023-06-27)
+
+
+### Dependencies and Other Build Updates
+
+* **deps-dev:** bump @commitlint/cli from 17.6.5 to 17.6.6 ([#75](https://github.com/Th3S4mur41/purge-svg/issues/75)) ([e8eb462](https://github.com/Th3S4mur41/purge-svg/commit/e8eb462d0a5fdc35c55e069312c828e5eed77fed))
+* **deps-dev:** bump @commitlint/config-conventional ([#74](https://github.com/Th3S4mur41/purge-svg/issues/74)) ([db73abb](https://github.com/Th3S4mur41/purge-svg/commit/db73abb159613d5cd9907515695997ce885ece98))
+* **deps:** bump glob from 10.3.0 to 10.3.1 ([#76](https://github.com/Th3S4mur41/purge-svg/issues/76)) ([9394081](https://github.com/Th3S4mur41/purge-svg/commit/93940818b7ce75c0b2a6db93197b18a0b3e32332))
+
 ## [2.0.7](https://github.com/Th3S4mur41/purge-svg/compare/v2.0.6...v2.0.7) (2023-06-21)
 
 
