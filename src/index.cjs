@@ -10,7 +10,7 @@ const {
 	ERROR_MISSING_SVGS,
 	ERROR_OPTIONS_TYPE,
 	ERROR_WHITELIST_TYPE,
-} = require("./constants");
+} = require("./constants.cjs");
 
 const defaultOptions = {
 	content: [],
