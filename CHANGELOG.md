@@ -1,3 +1,10 @@
+## [2.0.11](https://github.com/Th3S4mur41/purge-svg/compare/v2.0.10...v2.0.11) (2023-09-05)
+
+
+### Dependencies and Other Build Updates
+
+* **deps:** bump actions/checkout from 3 to 4 ([#98](https://github.com/Th3S4mur41/purge-svg/issues/98)) ([ec14eda](https://github.com/Th3S4mur41/purge-svg/commit/ec14eda0bcc198002057ea7e9e3a513a6ab93db5))
+
 ## [2.0.10](https://github.com/Th3S4mur41/purge-svg/compare/v2.0.9...v2.0.10) (2023-08-31)
 
 
