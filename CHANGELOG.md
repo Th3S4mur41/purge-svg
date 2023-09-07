@@ -1,3 +1,10 @@
+## [2.0.12](https://github.com/Th3S4mur41/purge-svg/compare/v2.0.11...v2.0.12) (2023-09-07)
+
+
+### Dependencies and Other Build Updates
+
+* **deps:** bump Namchee/conventional-pr from 0.13.0 to 0.14.0 ([#99](https://github.com/Th3S4mur41/purge-svg/issues/99)) ([f76ab4e](https://github.com/Th3S4mur41/purge-svg/commit/f76ab4e4345ceea13d488c0366d1552fc229f7ff))
+
 ## [2.0.11](https://github.com/Th3S4mur41/purge-svg/compare/v2.0.10...v2.0.11) (2023-09-05)
 
 
