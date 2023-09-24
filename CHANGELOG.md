@@ -1,3 +1,11 @@
+## [2.0.14](https://github.com/Th3S4mur41/purge-svg/compare/v2.0.13...v2.0.14) (2023-09-24)
+
+
+### Dependencies and Other Build Updates
+
+* **deps-dev:** bump semantic-release from 22.0.0 to 22.0.1 ([#102](https://github.com/Th3S4mur41/purge-svg/issues/102)) ([a66eee2](https://github.com/Th3S4mur41/purge-svg/commit/a66eee23583abff86b5605ca168c2521a020f18e))
+* **deps:** bump glob from 10.3.5 to 10.3.7 ([#104](https://github.com/Th3S4mur41/purge-svg/issues/104)) ([40d958d](https://github.com/Th3S4mur41/purge-svg/commit/40d958d729ff46d1a573e4dae0e727d5155497fe))
+
 ## [2.0.13](https://github.com/Th3S4mur41/purge-svg/compare/v2.0.12...v2.0.13) (2023-09-21)
 
 
