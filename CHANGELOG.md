@@ -1,3 +1,10 @@
+## [2.0.16](https://github.com/Th3S4mur41/purge-svg/compare/v2.0.15...v2.0.16) (2023-09-27)
+
+
+### Dependencies and Other Build Updates
+
+* **deps:** bump glob from 10.3.9 to 10.3.10 ([#107](https://github.com/Th3S4mur41/purge-svg/issues/107)) ([1843e9a](https://github.com/Th3S4mur41/purge-svg/commit/1843e9a39631cde30df5cbf42e7698d3bce6bc73))
+
 ## [2.0.15](https://github.com/Th3S4mur41/purge-svg/compare/v2.0.14...v2.0.15) (2023-09-26)
 
 
