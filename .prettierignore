@@ -28,7 +28,7 @@ yarn-error.log*
 
 /coverage
 
-# Extensions covered by Rome
+# Extensions covered by Biome
 *.js
 *.cjs
 *.mjs
