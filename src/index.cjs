@@ -136,35 +136,30 @@ class PurgeSvg {
 
 		const outSvgs = {};
 
-		for (const svgObj of PurgeSvg.prepareSvgPaths(this.options.svgs)) {
+		// biome-ignore lint/complexity/noForEach: test is failing
+		PurgeSvg.prepareSvgPaths(this.options.svgs).forEach((svgObj) => { 
 			const ids = new Set([
 				...(contentIds[svgObj.filename] || []),
 				...(this.options.whitelist[svgObj.filename] || []),
 				...(this.options.whitelist["*"] || []),
 			]);
-
 			const svg = xml2js(fs.readFileSync(svgObj.in, "utf8"), { compact: true });
-
 			let symbols = svg.svg.symbol;
-
 			if (typeof symbols === "undefined") {
 				symbols = svg.svg.defs.symbol;
 			}
-
 			if (typeof symbols === "undefined") {
 				return;
 			}
-
 			if (!Array.isArray(symbols)) {
 				symbols = [symbols];
 			}
-
 			if (!Array.isArray(outSvgs[svgObj.out])) {
 				outSvgs[svgObj.out] = [];
 			}
 
 			outSvgs[svgObj.out].push(...symbols.filter((s) => ids.has(s._attributes.id)));
-		}
+		});
 
 		for (const filename in outSvgs) {
 			const svg = {
