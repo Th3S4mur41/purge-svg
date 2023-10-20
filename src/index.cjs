@@ -109,7 +109,7 @@ class PurgeSvg {
 
 		const icons = {};
 
-		PurgeSvg.globPaths(content).forEach((filePath) => {
+		for (const filePath of PurgeSvg.globPaths(content)) {
 			const content = fs.readFileSync(filePath, "utf-8");
 
 			let m;
@@ -126,7 +126,7 @@ class PurgeSvg {
 
 				icons[svgFile].add(m[2]);
 			}
-		});
+		}
 
 		return icons;
 	}
@@ -136,29 +136,24 @@ class PurgeSvg {
 
 		const outSvgs = {};
 
+		// biome-ignore lint/complexity/noForEach: test is failing
 		PurgeSvg.prepareSvgPaths(this.options.svgs).forEach((svgObj) => {
 			const ids = new Set([
 				...(contentIds[svgObj.filename] || []),
 				...(this.options.whitelist[svgObj.filename] || []),
 				...(this.options.whitelist["*"] || []),
 			]);
-
 			const svg = xml2js(fs.readFileSync(svgObj.in, "utf8"), { compact: true });
-
 			let symbols = svg.svg.symbol;
-
 			if (typeof symbols === "undefined") {
 				symbols = svg.svg.defs.symbol;
 			}
-
 			if (typeof symbols === "undefined") {
 				return;
 			}
-
 			if (!Array.isArray(symbols)) {
 				symbols = [symbols];
 			}
-
 			if (!Array.isArray(outSvgs[svgObj.out])) {
 				outSvgs[svgObj.out] = [];
 			}

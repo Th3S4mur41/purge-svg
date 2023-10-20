@@ -8,7 +8,7 @@ const rootPath = appRoot.path;
 
 const deleteFolderRecursive = (path) => {
 	if (fs.existsSync(path)) {
-		fs.readdirSync(path).forEach((file) => {
+		for (const file of fs.readdirSync(path)) {
 			const curPath = `${path}/${file}`;
 
 			if (fs.lstatSync(curPath).isDirectory()) {
@@ -16,7 +16,7 @@ const deleteFolderRecursive = (path) => {
 			} else {
 				fs.unlinkSync(curPath);
 			}
-		});
+		}
 
 		fs.rmdirSync(path);
 	}
