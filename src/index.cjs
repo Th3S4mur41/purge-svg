@@ -109,7 +109,7 @@ class PurgeSvg {
 
 		const icons = {};
 
-		PurgeSvg.globPaths(content).forEach((filePath) => {
+		for (const filePath of PurgeSvg.globPaths(content)) {
 			const content = fs.readFileSync(filePath, "utf-8");
 
 			let m;
@@ -126,7 +126,7 @@ class PurgeSvg {
 
 				icons[svgFile].add(m[2]);
 			}
-		});
+		}
 
 		return icons;
 	}
@@ -136,7 +136,7 @@ class PurgeSvg {
 
 		const outSvgs = {};
 
-		PurgeSvg.prepareSvgPaths(this.options.svgs).forEach((svgObj) => {
+		for (const svgObj of PurgeSvg.prepareSvgPaths(this.options.svgs)) {
 			const ids = new Set([
 				...(contentIds[svgObj.filename] || []),
 				...(this.options.whitelist[svgObj.filename] || []),
@@ -164,7 +164,7 @@ class PurgeSvg {
 			}
 
 			outSvgs[svgObj.out].push(...symbols.filter((s) => ids.has(s._attributes.id)));
-		});
+		}
 
 		for (const filename in outSvgs) {
 			const svg = {
