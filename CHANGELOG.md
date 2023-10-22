@@ -1,3 +1,16 @@
+## [2.0.17](https://github.com/Th3S4mur41/purge-svg/compare/v2.0.16...v2.0.17) (2023-10-22)
+
+
+### Dependencies and Other Build Updates
+
+* **deps-dev:** bump @babel/traverse from 7.22.17 to 7.23.2 ([#111](https://github.com/Th3S4mur41/purge-svg/issues/111)) ([903717d](https://github.com/Th3S4mur41/purge-svg/commit/903717d03e9774e05b3de6f7b6258ff29b316b99))
+* **deps-dev:** bump @biomejs/biome from 1.2.2 to 1.3.0 ([#112](https://github.com/Th3S4mur41/purge-svg/issues/112)) ([05ce6b6](https://github.com/Th3S4mur41/purge-svg/commit/05ce6b601c1dfdf75bbd47900c2aa15da5c99279))
+* **deps-dev:** bump @biomejs/biome from 1.3.0 to 1.3.1 ([#115](https://github.com/Th3S4mur41/purge-svg/issues/115)) ([dd5da40](https://github.com/Th3S4mur41/purge-svg/commit/dd5da40ae4236cf5ef4c23543637b9a8237ee591))
+* **deps-dev:** bump @commitlint/cli from 17.7.1 to 17.7.2 ([#108](https://github.com/Th3S4mur41/purge-svg/issues/108)) ([6147f7b](https://github.com/Th3S4mur41/purge-svg/commit/6147f7b6d2aa908691b4e53dfeda053f79910a62))
+* **deps-dev:** bump @commitlint/cli from 17.7.2 to 17.8.0 ([#110](https://github.com/Th3S4mur41/purge-svg/issues/110)) ([1300697](https://github.com/Th3S4mur41/purge-svg/commit/130069769433185d448e0551f36337c84a663d21))
+* **deps-dev:** bump @commitlint/config-conventional ([#109](https://github.com/Th3S4mur41/purge-svg/issues/109)) ([d8e176c](https://github.com/Th3S4mur41/purge-svg/commit/d8e176cb26593d04c1b86c458d456e99eb15dcf2))
+* **deps:** bump Namchee/conventional-pr from 0.14.0 to 0.14.1 ([#116](https://github.com/Th3S4mur41/purge-svg/issues/116)) ([09971e8](https://github.com/Th3S4mur41/purge-svg/commit/09971e80c88f1485c08f2ea1f1cc1499c382e1ac))
+
 ## [2.0.16](https://github.com/Th3S4mur41/purge-svg/compare/v2.0.15...v2.0.16) (2023-09-27)
 
 
