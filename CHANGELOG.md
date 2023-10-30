@@ -1,3 +1,13 @@
+## [2.0.19](https://github.com/Th3S4mur41/purge-svg/compare/v2.0.18...v2.0.19) (2023-10-30)
+
+
+### Dependencies and Other Build Updates
+
+* **deps-dev:** bump @commitlint/cli from 18.0.0 to 18.1.0 ([#118](https://github.com/Th3S4mur41/purge-svg/issues/118)) ([fd28546](https://github.com/Th3S4mur41/purge-svg/commit/fd28546a65aa9c2b8c9d04b7248671344409d40a))
+* **deps-dev:** bump @commitlint/cli from 18.1.0 to 18.2.0 ([#120](https://github.com/Th3S4mur41/purge-svg/issues/120)) ([199f895](https://github.com/Th3S4mur41/purge-svg/commit/199f895cd47fc502321a8ba7667776b68bb76a1d))
+* **deps-dev:** bump @commitlint/config-conventional ([#119](https://github.com/Th3S4mur41/purge-svg/issues/119)) ([963ae58](https://github.com/Th3S4mur41/purge-svg/commit/963ae58b1b5a41646ff3df4998c0acbe2273c27b))
+* **deps:** bump Namchee/conventional-pr from 0.14.1 to 0.15.1 ([#121](https://github.com/Th3S4mur41/purge-svg/issues/121)) ([3a30459](https://github.com/Th3S4mur41/purge-svg/commit/3a30459c0a08eb7889a9ab55602880511ce018ee))
+
 ## [2.0.18](https://github.com/Th3S4mur41/purge-svg/compare/v2.0.17...v2.0.18) (2023-10-24)
 
 
