@@ -1,3 +1,10 @@
+## [2.0.21](https://github.com/Th3S4mur41/purge-svg/compare/v2.0.20...v2.0.21) (2023-12-21)
+
+
+### Dependencies and Other Build Updates
+
+* **deps:** bump github/codeql-action from 2 to 3 ([#141](https://github.com/Th3S4mur41/purge-svg/issues/141)) ([55fe780](https://github.com/Th3S4mur41/purge-svg/commit/55fe7801148ecec23cd2955f92e5fc4e62bba7c4))
+
 ## [2.0.20](https://github.com/Th3S4mur41/purge-svg/compare/v2.0.19...v2.0.20) (2023-12-20)
 
 
