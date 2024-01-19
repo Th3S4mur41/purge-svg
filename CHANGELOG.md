@@ -1,3 +1,18 @@
+## [2.0.22](https://github.com/Th3S4mur41/purge-svg/compare/v2.0.21...v2.0.22) (2024-01-19)
+
+
+### Dependencies and Other Build Updates
+
+* **deps-dev:** bump @biomejs/biome from 1.4.1 to 1.5.0 ([#145](https://github.com/Th3S4mur41/purge-svg/issues/145)) ([d884e5d](https://github.com/Th3S4mur41/purge-svg/commit/d884e5db4d9a9082cab8d39755bb5f02df951c42))
+* **deps-dev:** bump @biomejs/biome from 1.5.0 to 1.5.1 ([#146](https://github.com/Th3S4mur41/purge-svg/issues/146)) ([3991a75](https://github.com/Th3S4mur41/purge-svg/commit/3991a7585328304ec593a03222f43d423deebf6a))
+* **deps-dev:** bump @biomejs/biome from 1.5.1 to 1.5.2 ([#149](https://github.com/Th3S4mur41/purge-svg/issues/149)) ([739ba94](https://github.com/Th3S4mur41/purge-svg/commit/739ba94612c21ee0edb8c66065918db567c93ac7))
+* **deps-dev:** bump @commitlint/cli from 18.4.3 to 18.4.4 ([#144](https://github.com/Th3S4mur41/purge-svg/issues/144)) ([0e9339a](https://github.com/Th3S4mur41/purge-svg/commit/0e9339a47ed14fe8f0e3264f4b0a5d4dc66443ed))
+* **deps-dev:** bump @commitlint/config-conventional ([#143](https://github.com/Th3S4mur41/purge-svg/issues/143)) ([5a17e97](https://github.com/Th3S4mur41/purge-svg/commit/5a17e973189c16af467ff0831f7645fde08ea98f))
+* **deps-dev:** bump prettier from 3.1.1 to 3.2.2 ([#147](https://github.com/Th3S4mur41/purge-svg/issues/147)) ([92499b2](https://github.com/Th3S4mur41/purge-svg/commit/92499b2f37298c4ae3b022610dcda79306ed2023))
+* **deps-dev:** bump prettier from 3.2.2 to 3.2.4 ([#150](https://github.com/Th3S4mur41/purge-svg/issues/150)) ([4a8107b](https://github.com/Th3S4mur41/purge-svg/commit/4a8107b1f4cd4482be7a3f105787601f2c2c8799))
+* **deps-dev:** bump semantic-release from 22.0.12 to 23.0.0 ([#148](https://github.com/Th3S4mur41/purge-svg/issues/148)) ([5df6dca](https://github.com/Th3S4mur41/purge-svg/commit/5df6dcae6ba2f4d3dded0dfa76b8ea645dde26d3))
+* **deps:** bump actions/dependency-review-action from 3 to 4 ([#151](https://github.com/Th3S4mur41/purge-svg/issues/151)) ([ca6b7f0](https://github.com/Th3S4mur41/purge-svg/commit/ca6b7f0950e2d097de7d59e3d4b84a99d7920d47))
+
 ## [2.0.21](https://github.com/Th3S4mur41/purge-svg/compare/v2.0.20...v2.0.21) (2023-12-21)
 
 
