@@ -23,13 +23,7 @@
 		"access": "public"
 	},
 	"funding": "https://github.com/sponsors/Th3S4mur41",
-	"keywords": [
-		"optimization",
-		"remove",
-		"unused",
-		"svg",
-		"purge"
-	],
+	"keywords": ["optimization", "remove", "unused", "svg", "purge"],
 	"scripts": {
 		"test": "jest __tests__/.+.test.js",
 		"test-report": "npm run test -- --collectCoverage",

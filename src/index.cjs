@@ -1,6 +1,6 @@
-const path = require("path");
+const path = require("node:path");
 const { xml2js, js2xml } = require("xml-js");
-const fs = require("fs");
+const fs = require("node:fs");
 const glob = require("glob");
 
 const {
