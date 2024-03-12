@@ -1,6 +1,6 @@
 /* eslint no-new: "off" */
 const appRoot = require("app-root-path");
-const fs = require("fs");
+const fs = require("node:fs");
 const { xml2js } = require("xml-js");
 
 const PurgeSvg = require("./../src");
