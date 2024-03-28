@@ -1,3 +1,35 @@
+## [2.0.23](https://github.com/Th3S4mur41/purge-svg/compare/v2.0.22...v2.0.23) (2024-03-28)
+
+
+### Dependencies and Other Build Updates
+
+* **deps-dev:** bump @biomejs/biome from 1.5.2 to 1.5.3 ([#154](https://github.com/Th3S4mur41/purge-svg/issues/154)) ([4ad98a4](https://github.com/Th3S4mur41/purge-svg/commit/4ad98a4528327fa5b56c44e8aa5dbbba20ab1be5))
+* **deps-dev:** bump @biomejs/biome from 1.5.3 to 1.6.0 ([#167](https://github.com/Th3S4mur41/purge-svg/issues/167)) ([29ab1b5](https://github.com/Th3S4mur41/purge-svg/commit/29ab1b575c77126ddbd3d8bc9d501b9355b7a1e5))
+* **deps-dev:** bump @biomejs/biome from 1.6.0 to 1.6.1 ([#169](https://github.com/Th3S4mur41/purge-svg/issues/169)) ([ab3abc2](https://github.com/Th3S4mur41/purge-svg/commit/ab3abc2bd4d03973b1275c292f84e42921b4dc45))
+* **deps-dev:** bump @biomejs/biome from 1.6.1 to 1.6.2 ([#175](https://github.com/Th3S4mur41/purge-svg/issues/175)) ([e617c74](https://github.com/Th3S4mur41/purge-svg/commit/e617c74c05498381120e153864310419a0663d6f))
+* **deps-dev:** bump @biomejs/biome from 1.6.2 to 1.6.3 ([#177](https://github.com/Th3S4mur41/purge-svg/issues/177)) ([8c08ef5](https://github.com/Th3S4mur41/purge-svg/commit/8c08ef5b0f23363e3c2a9b2f5bfa52bf3ef45c19))
+* **deps-dev:** bump @commitlint/cli from 18.4.4 to 18.5.0 ([#153](https://github.com/Th3S4mur41/purge-svg/issues/153)) ([3468da0](https://github.com/Th3S4mur41/purge-svg/commit/3468da072e42adedc23cf3dace2ad8fd76fe686e))
+* **deps-dev:** bump @commitlint/cli from 18.5.0 to 18.6.0 ([#155](https://github.com/Th3S4mur41/purge-svg/issues/155)) ([a864624](https://github.com/Th3S4mur41/purge-svg/commit/a86462435545a1612f52f88e05e9eb06b6911552))
+* **deps-dev:** bump @commitlint/cli from 18.6.0 to 18.6.1 ([#160](https://github.com/Th3S4mur41/purge-svg/issues/160)) ([7a6331f](https://github.com/Th3S4mur41/purge-svg/commit/7a6331f45992cd1f03b1f7f91b1ca35d46ab0896))
+* **deps-dev:** bump @commitlint/cli from 18.6.1 to 19.0.3 ([#165](https://github.com/Th3S4mur41/purge-svg/issues/165)) ([a8f7a98](https://github.com/Th3S4mur41/purge-svg/commit/a8f7a9837bdccac3ee9cf8971e8ebd2010078da5))
+* **deps-dev:** bump @commitlint/cli from 19.0.3 to 19.1.0 ([#170](https://github.com/Th3S4mur41/purge-svg/issues/170)) ([96ad3ad](https://github.com/Th3S4mur41/purge-svg/commit/96ad3ad49b2c14e4f733fa5442d659729806fd05))
+* **deps-dev:** bump @commitlint/cli from 19.1.0 to 19.2.0 ([#172](https://github.com/Th3S4mur41/purge-svg/issues/172)) ([c1214e2](https://github.com/Th3S4mur41/purge-svg/commit/c1214e2b8895ee90ffc254e632722f9e585e357f))
+* **deps-dev:** bump @commitlint/cli from 19.2.0 to 19.2.1 ([#174](https://github.com/Th3S4mur41/purge-svg/issues/174)) ([e723a78](https://github.com/Th3S4mur41/purge-svg/commit/e723a783bd567f060a6847d24c0e68a9e1b6f6d4))
+* **deps-dev:** bump @commitlint/config-conventional ([#152](https://github.com/Th3S4mur41/purge-svg/issues/152)) ([bc5b9be](https://github.com/Th3S4mur41/purge-svg/commit/bc5b9bec0811c191592cb868cff3025fcc5920c0))
+* **deps-dev:** bump @commitlint/config-conventional ([#156](https://github.com/Th3S4mur41/purge-svg/issues/156)) ([a8b72fe](https://github.com/Th3S4mur41/purge-svg/commit/a8b72fea100599297b2a698f97c6c4dd64b7f6fe))
+* **deps-dev:** bump @commitlint/config-conventional ([#161](https://github.com/Th3S4mur41/purge-svg/issues/161)) ([71c883d](https://github.com/Th3S4mur41/purge-svg/commit/71c883d5fab7e0422744dbea83d592566869a5c9))
+* **deps-dev:** bump @commitlint/config-conventional ([#162](https://github.com/Th3S4mur41/purge-svg/issues/162)) ([8817b2a](https://github.com/Th3S4mur41/purge-svg/commit/8817b2a093e72dbeae7b5f1cac183515e27a4cf4))
+* **deps-dev:** bump @commitlint/config-conventional ([#163](https://github.com/Th3S4mur41/purge-svg/issues/163)) ([b736e32](https://github.com/Th3S4mur41/purge-svg/commit/b736e32c6d90b15c91a80945e29f0f1d08443343))
+* **deps-dev:** bump @commitlint/config-conventional ([#166](https://github.com/Th3S4mur41/purge-svg/issues/166)) ([180d38a](https://github.com/Th3S4mur41/purge-svg/commit/180d38abaa9a2d31b544d47a521311f32547be32))
+* **deps-dev:** bump @commitlint/config-conventional ([#168](https://github.com/Th3S4mur41/purge-svg/issues/168)) ([6dbc309](https://github.com/Th3S4mur41/purge-svg/commit/6dbc309076e4a40f40c89cf63ee67f7ec24b4f30))
+* **deps-dev:** bump prettier from 3.2.4 to 3.2.5 ([#157](https://github.com/Th3S4mur41/purge-svg/issues/157)) ([98452a4](https://github.com/Th3S4mur41/purge-svg/commit/98452a4d001695f09da22e0db2af047406d80b27))
+* **deps-dev:** bump semantic-release from 23.0.0 to 23.0.1 ([#158](https://github.com/Th3S4mur41/purge-svg/issues/158)) ([d7dca09](https://github.com/Th3S4mur41/purge-svg/commit/d7dca0999d99c376a4f19b4c7c2d7063d38d6d68))
+* **deps-dev:** bump semantic-release from 23.0.1 to 23.0.2 ([#159](https://github.com/Th3S4mur41/purge-svg/issues/159)) ([8506336](https://github.com/Th3S4mur41/purge-svg/commit/85063363deb4675acdd73c4e75e5029d91f6cf9e))
+* **deps-dev:** bump semantic-release from 23.0.2 to 23.0.4 ([#171](https://github.com/Th3S4mur41/purge-svg/issues/171)) ([88f3386](https://github.com/Th3S4mur41/purge-svg/commit/88f338652edf3d19a70d74a56bf769ab905588e0))
+* **deps-dev:** bump semantic-release from 23.0.4 to 23.0.5 ([#173](https://github.com/Th3S4mur41/purge-svg/issues/173)) ([170b3a9](https://github.com/Th3S4mur41/purge-svg/commit/170b3a9f1a41d949afc1ebd1afed4c5697241913))
+* **deps-dev:** bump semantic-release from 23.0.5 to 23.0.6 ([#176](https://github.com/Th3S4mur41/purge-svg/issues/176)) ([4965b5c](https://github.com/Th3S4mur41/purge-svg/commit/4965b5cb170dfe7fece7b063dd01f760e338d314))
+* **deps:** bump glob from 10.3.10 to 10.3.12 ([#178](https://github.com/Th3S4mur41/purge-svg/issues/178)) ([3a93cb3](https://github.com/Th3S4mur41/purge-svg/commit/3a93cb39b446e3a43e0f1e59ebcd2523c8b7e19c))
+
 ## [2.0.22](https://github.com/Th3S4mur41/purge-svg/compare/v2.0.21...v2.0.22) (2024-01-19)
 
 
