@@ -23,13 +23,7 @@
 		"access": "public"
 	},
 	"funding": "https://github.com/sponsors/Th3S4mur41",
-	"keywords": [
-		"optimization",
-		"remove",
-		"unused",
-		"svg",
-		"purge"
-	],
+	"keywords": ["optimization", "remove", "unused", "svg", "purge"],
 	"scripts": {
 		"test": "jest __tests__/.+.test.js",
 		"test-report": "npm run test -- --collectCoverage",
@@ -47,7 +41,7 @@
 		"yargs": "^17.6.2"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "1.6.3",
+		"@biomejs/biome": "1.6.4",
 		"@commitlint/cli": "^19.0.3",
 		"@commitlint/config-conventional": "^19.0.0",
 		"@semantic-release/changelog": "^6.0.2",
