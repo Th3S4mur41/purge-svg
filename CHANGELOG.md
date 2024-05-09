@@ -1,3 +1,20 @@
+## [2.0.24](https://github.com/Th3S4mur41/purge-svg/compare/v2.0.23...v2.0.24) (2024-05-09)
+
+
+### Dependencies and Other Build Updates
+
+* **deps-dev:** bump @biomejs/biome from 1.6.3 to 1.6.4 ([#180](https://github.com/Th3S4mur41/purge-svg/issues/180)) ([e0cabe6](https://github.com/Th3S4mur41/purge-svg/commit/e0cabe63f045b86293f4842fc235609ad5484b92))
+* **deps-dev:** bump @biomejs/biome from 1.6.4 to 1.7.0 ([#184](https://github.com/Th3S4mur41/purge-svg/issues/184)) ([207327f](https://github.com/Th3S4mur41/purge-svg/commit/207327f401982a50ca843d37de1b5ba46905697b))
+* **deps-dev:** bump @biomejs/biome from 1.7.0 to 1.7.1 ([#185](https://github.com/Th3S4mur41/purge-svg/issues/185)) ([9bd086f](https://github.com/Th3S4mur41/purge-svg/commit/9bd086f5d88fcb10f5ef5ecf1bfd649dc668d8f9))
+* **deps-dev:** bump @biomejs/biome from 1.7.1 to 1.7.2 ([#187](https://github.com/Th3S4mur41/purge-svg/issues/187)) ([2e70e18](https://github.com/Th3S4mur41/purge-svg/commit/2e70e18cf8eb5dcebdce7541da655b0413c329b3))
+* **deps-dev:** bump @biomejs/biome from 1.7.2 to 1.7.3 ([#188](https://github.com/Th3S4mur41/purge-svg/issues/188)) ([f51b0f4](https://github.com/Th3S4mur41/purge-svg/commit/f51b0f499c74935718a922ff68d112beced6743c))
+* **deps-dev:** bump @commitlint/cli from 19.2.1 to 19.2.2 ([#182](https://github.com/Th3S4mur41/purge-svg/issues/182)) ([e8caae1](https://github.com/Th3S4mur41/purge-svg/commit/e8caae1bf44dccfb1a4685c82a9b2c4e61f14ff3))
+* **deps-dev:** bump @commitlint/cli from 19.2.2 to 19.3.0 ([#186](https://github.com/Th3S4mur41/purge-svg/issues/186)) ([ffedc1a](https://github.com/Th3S4mur41/purge-svg/commit/ffedc1a7fc2020ab24f1cfe75d83ad65de9082dd))
+* **deps-dev:** bump @commitlint/config-conventional ([#183](https://github.com/Th3S4mur41/purge-svg/issues/183)) ([25f9ac7](https://github.com/Th3S4mur41/purge-svg/commit/25f9ac7daec0819ec96e401f3ea51ce30f28b870))
+* **deps-dev:** bump semantic-release from 23.0.6 to 23.0.7 ([#179](https://github.com/Th3S4mur41/purge-svg/issues/179)) ([d857723](https://github.com/Th3S4mur41/purge-svg/commit/d857723ec8213962c289191ebb1bd3e84435a008))
+* **deps-dev:** bump semantic-release from 23.0.7 to 23.0.8 ([#181](https://github.com/Th3S4mur41/purge-svg/issues/181)) ([2bba196](https://github.com/Th3S4mur41/purge-svg/commit/2bba1968970e6dc21244eaca74d02b5b9ff8ffe8))
+* **deps:** bump glob from 10.3.12 to 10.3.14 ([#189](https://github.com/Th3S4mur41/purge-svg/issues/189)) ([cdf197a](https://github.com/Th3S4mur41/purge-svg/commit/cdf197a0393956f9fede378652d15efa15527005))
+
 ## [2.0.23](https://github.com/Th3S4mur41/purge-svg/compare/v2.0.22...v2.0.23) (2024-03-28)
 
 
