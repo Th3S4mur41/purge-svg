@@ -51,6 +51,6 @@
 		"babel-eslint": "^10.1.0",
 		"jest": "^29.4.1",
 		"prettier": "^3.0.1",
-		"semantic-release": "^23.0.0"
+		"semantic-release": "^24.1.2"
 	}
 }
