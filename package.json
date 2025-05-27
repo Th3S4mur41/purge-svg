@@ -39,7 +39,7 @@
 	"dependencies": {
 		"glob": "^11.0.0",
 		"xml-js": "^1.6.11",
-		"yargs": "^17.6.2"
+		"yargs": "^18.0.0"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
