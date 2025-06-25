@@ -136,7 +136,6 @@ class PurgeSvg {
 
 		const outSvgs = {};
 
-		// biome-ignore lint/complexity/noForEach: test is failing
 		PurgeSvg.prepareSvgPaths(this.options.svgs).forEach((svgObj) => {
 			const ids = new Set([
 				...(contentIds[svgObj.filename] || []),
