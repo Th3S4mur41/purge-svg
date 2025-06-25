@@ -23,12 +23,18 @@
 		"access": "public"
 	},
 	"funding": "https://github.com/sponsors/Th3S4mur41",
-	"keywords": ["optimization", "remove", "unused", "svg", "purge"],
+	"keywords": [
+		"optimization",
+		"remove",
+		"unused",
+		"svg",
+		"purge"
+	],
 	"scripts": {
 		"test": "jest __tests__/.+.test.js",
 		"test-report": "npm run test -- --collectCoverage",
 		"lint": "biome  ci . && prettier --check --ignore-unknown .",
-		"lint:fix": "biome  check --apply . && prettier --write --ignore-unknown .",
+		"lint:fix": "biome  check --write . && prettier --write --ignore-unknown .",
 		"postversion": "npm run lint:style:fix",
 		"release": "semantic-release"
 	},
