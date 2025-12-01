@@ -28,5 +28,6 @@ jobs:
       contents: write
       issues: write
       pull-requests: write
+      id-token: write
     secrets:
       GH_TOKEN: ${{ secrets.GH_TOKEN }} # Token with repo write permission & admin rights to push to protected branches
