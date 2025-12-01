@@ -36,7 +36,6 @@
 		"test-report": "npm run test -- --collectCoverage",
 		"lint": "biome  ci . && prettier --check --ignore-unknown .",
 		"lint:fix": "biome  check --write . && prettier --write --ignore-unknown .",
-		"postversion": "npm run lint:fix",
 		"release": "semantic-release"
 	},
 	"repository": {
