@@ -10,12 +10,15 @@ on:
   workflow_dispatch:
 
 permissions:
-  pull-requests: write
+  contents: read
 
 jobs:
   lint-pr:
     name: '🕵️‍♂️ Lint Commit Message'
     runs-on: ubuntu-latest
+
+    permissions:
+      pull-requests: write
 
     steps:
       # check for the most recent release: https://github.com/Namchee/conventional-pr/releases

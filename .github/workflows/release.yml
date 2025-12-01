@@ -24,5 +24,9 @@ jobs:
   semantic-release:
     name: '▶️ actions'
     uses: ./.github/workflows/semantic-release.yml
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
     secrets:
       GH_TOKEN: ${{ secrets.GH_TOKEN }} # Token with repo write permission & admin rights to push to protected branches
