@@ -33,8 +33,3 @@ jobs:
     name: '▶️ actions'
     needs: [npm-lint]
     uses: ./.github/workflows/npm-test.yml
-
-  codeql:
-    name: '▶️ actions'
-    needs: [npm-lint]
-    uses: ./.github/workflows/codeql.yml

@@ -25,14 +25,9 @@ jobs:
     needs: [npm-lint]
     uses: ./.github/workflows/npm-test.yml
 
-  codeql:
-    name: '▶️ actions'
-    needs: [npm-lint]
-    uses: ./.github/workflows/codeql.yml
-
   release:
     name: '▶️ actions'
-    needs: [npm-lint, npm-test, codeql]
+    needs: [npm-lint, npm-test]
     uses: ./.github/workflows/semantic-release.yml
     secrets:
       GH_TOKEN: ${{ secrets.GH_TOKEN }} # Token with repo write permission & admin rights to push to protected branches
