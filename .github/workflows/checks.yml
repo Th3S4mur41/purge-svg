@@ -1,19 +1,26 @@
-# This is workflow runs on PR
 #
-name: Check Pull Request
+# Run all checks on PRs and pushes
+#
+name: Checks
 
 # Controls when the action will run.
 on:
-  # Trigger workflow for pull requests.
   pull_request:
     types: [opened, synchronize, reopened]
+
+  push:
+    branches: [main, next, beta, alpha]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 concurrency:
-  group: PR_${{ github.head_ref || github.run_id }}
+  group: ${{ github.workflow }}_${{ github.head_ref || github.ref_name || github.run_id }}
   cancel-in-progress: true
+
+# Declare default permissions as read only.
+permissions:
+  contents: read
 
 jobs:
   dependencies:
@@ -22,6 +29,7 @@ jobs:
 
   pr-lint:
     name: '▶️ actions'
+    needs: [dependencies]
     uses: ./.github/workflows/pr-lint.yml
 
   npm-lint:
@@ -31,5 +39,6 @@ jobs:
 
   npm-test:
     name: '▶️ actions'
-    needs: [npm-lint]
+    needs: [pr-lint]
     uses: ./.github/workflows/npm-test.yml
+      

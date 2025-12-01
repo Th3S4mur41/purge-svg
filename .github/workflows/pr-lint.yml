@@ -18,12 +18,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: '☁️ Checkout repository'
-        uses: actions/checkout@v6
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-          persist-credentials: false
-
       # check for the most recent release: https://github.com/Namchee/conventional-pr/releases
       - name: '✅ Lint PR'
         uses: Namchee/conventional-pr@v0.15.6
