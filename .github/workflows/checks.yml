@@ -32,7 +32,6 @@ jobs:
 
   pr-lint:
     name: '▶️ actions'
-    needs: [dependencies]
     uses: ./.github/workflows/pr-lint.yml
     permissions:
       contents: read
