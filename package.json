@@ -44,7 +44,7 @@
 		"url": "https://github.com/Th3S4mur41/purge-svg.git"
 	},
 	"dependencies": {
-		"glob": "^11.0.0",
+		"glob": "^13.0.0",
 		"xml-js": "^1.6.11",
 		"yargs": "^18.0.0"
 	},
