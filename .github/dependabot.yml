@@ -14,7 +14,7 @@ updates:
     groups:
       commitlint:
         patterns:
-          - '@commitlint/*'  
+          - '@commitlint/*'
 
   - package-ecosystem: 'github-actions'
     directory: '/'

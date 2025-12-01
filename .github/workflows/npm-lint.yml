@@ -36,4 +36,3 @@ jobs:
 
       - name: '🔏 Audit NPM dependencies signatures'
         run: npm audit signatures
-        
