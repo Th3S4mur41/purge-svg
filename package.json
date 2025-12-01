@@ -20,7 +20,8 @@
 		"test": "__tests__"
 	},
 	"publishConfig": {
-		"access": "public"
+		"access": "public",
+		"provenance": true
 	},
 	"funding": "https://github.com/sponsors/Th3S4mur41",
 	"keywords": [
